@@ -29,7 +29,7 @@
             Console.WriteLine(difference);
             int product = intInput1 * intInput2;      // Multiplication
             Console.WriteLine(product);
-            float quotient = intInput1 / intInput2;     // Division
+            float quotient = (float) intInput1 / intInput2;     // Division
             Console.WriteLine(quotient);
             int remainder = intInput1 % intInput2;    // Percentile
             Console.WriteLine(remainder);
