@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game1377_Excercises", "Game1377_Excercises\Game1377_Excercises.csproj", "{BEC51B7E-131E-4591-A876-1584DE8955E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C# Fundamentals 1", "..\..\..\Visual Studio Projects\C# Fundamentals 1\C# Fundamentals 1\C# Fundamentals 1.csproj", "{FE26B51A-7D0D-4E30-B129-D37B72C6672E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fundamentals1", "Fundamentals1\Fundamentals1.csproj", "{9A1419D8-E36E-4C0C-B199-A710D9A0D8F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{BEC51B7E-131E-4591-A876-1584DE8955E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEC51B7E-131E-4591-A876-1584DE8955E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEC51B7E-131E-4591-A876-1584DE8955E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE26B51A-7D0D-4E30-B129-D37B72C6672E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE26B51A-7D0D-4E30-B129-D37B72C6672E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE26B51A-7D0D-4E30-B129-D37B72C6672E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE26B51A-7D0D-4E30-B129-D37B72C6672E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1419D8-E36E-4C0C-B199-A710D9A0D8F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1419D8-E36E-4C0C-B199-A710D9A0D8F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1419D8-E36E-4C0C-B199-A710D9A0D8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1419D8-E36E-4C0C-B199-A710D9A0D8F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
