@@ -82,7 +82,27 @@
                 sum += intArray[i];
             }
             sumAverage = (sum / 10);
-            Console.WriteLine(sumAverage);
+            Console.WriteLine("For: " + sumAverage);
+
+            //2e
+            for (int i = 0;i < intArray.Length; i++)
+            {
+                if (i % 2  == 0)
+                {
+                    continue;
+                }
+                Console.WriteLine(intArray[i]);
+            }
+
+            //2f
+            for (int i = 0; i < intArray.Length; i++)
+            {
+                if (i % 3 != 2)
+                {
+                    continue;
+                }
+                Console.WriteLine(intArray[i]);
+            }
         }
         private static void Methods()
         {
