@@ -7,7 +7,13 @@
             Console.WriteLine("Hello, World!");
             Switch();
             ArrayLoops();
-            Methods();
+            int[] intArray = new int[5];
+            float[] floatArray = new float[5];
+            double[] doubleArray = new double[5];
+            IntMethod(intArray);
+            FloatMethod(floatArray);
+            DoubleMethod(doubleArray);
+            ConvertIntToFloatMethod(intArray);
         }
         private static void Switch()
         {
@@ -103,10 +109,49 @@
                 }
                 Console.WriteLine(intArray[i]);
             }
-        }
-        private static void Methods()
-        {
 
+            //2g
+            Console.WriteLine("ArraySize");
+            int arraySize = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("rangeMin");
+            int rangeMin = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("rangeMax");
+            int rangeMax = Convert.ToInt32(Console.ReadLine());
+
+            int[] intArray2 = new int[arraySize];
+            for(int i = 0; i < arraySize; i++)
+            {
+                intArray2[i] = new Random().Next(rangeMin, rangeMax);
+            }
+        }
+        //3a
+        private static void IntMethod(int[] p1)
+        {
+            for (int i = 0; i < p1.Length; i++)
+            {
+                Console.WriteLine(p1[i]);
+            }
+        }
+        //3b float
+        private static void FloatMethod(float[] p1)
+        {
+            for(int i = 0; i < p1.Length; i++)
+            {
+                Console.WriteLine(p1[i]);
+            }
+        }
+        //3b double
+        private static void DoubleMethod(double[] p1)
+        {
+            for (int i = 0; i < p1.Length; i++)
+            {
+                Console.WriteLine(p1[i]);
+            }
+        }
+        //3c
+        private static void ConvertIntToFloatMethod(int[] p1)
+        {
+            
         }
     }
 }
