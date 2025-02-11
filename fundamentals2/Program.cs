@@ -10,10 +10,17 @@
             int[] intArray = new int[5];
             float[] floatArray = new float[5];
             double[] doubleArray = new double[5];
+            Console.WriteLine("ArraySize");
+            int arraySize = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("rangeMin");
+            int rangeMin = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("rangeMax");
+            int rangeMax = Convert.ToInt32(Console.ReadLine());
             IntMethod(intArray);
-            FloatMethod(floatArray);
-            DoubleMethod(doubleArray);
+            FloatDoubleMethod(floatArray, doubleArray);
             ConvertIntToFloatMethod(intArray);
+            FloatDoubleAverageMethod(floatArray, doubleArray);
+            DynamicSizedMethod(arraySize, rangeMin, rangeMax);
         }
         private static void Switch()
         {
@@ -87,7 +94,7 @@
             {
                 sum += intArray[i];
             }
-            sumAverage = (sum / 10);
+            sumAverage = (sum / intArray.Length);
             Console.WriteLine("For: " + sumAverage);
 
             //2e
@@ -132,26 +139,55 @@
                 Console.WriteLine(p1[i]);
             }
         }
-        //3b float
-        private static void FloatMethod(float[] p1)
+        //3b
+        private static void FloatDoubleMethod(float[] p1, double[] p2)
         {
             for(int i = 0; i < p1.Length; i++)
             {
                 Console.WriteLine(p1[i]);
             }
-        }
-        //3b double
-        private static void DoubleMethod(double[] p1)
-        {
-            for (int i = 0; i < p1.Length; i++)
+            for (int i = 0; i < p2.Length; i++)
             {
-                Console.WriteLine(p1[i]);
+                Console.WriteLine(p2[i]);
             }
         }
         //3c
         private static void ConvertIntToFloatMethod(int[] p1)
         {
             
+        }
+        //3d
+        private static void FloatDoubleAverageMethod(float[] p1, double[] p2)
+        {
+            {
+                float sumAverage;
+                float sum = 0;
+                for (int i = 0; i < p1.Length; i++)
+                {
+                    sum += p1[i];
+                }
+                sumAverage = (sum / p1.Length);
+                Console.WriteLine("For: " + sumAverage);
+            }
+            {
+                double sumAverage2;
+                double sum2 = 0;
+                for (int i = 0; i < p2.Length; i++)
+                {
+                    sum2 += p2[i];
+                }
+                sumAverage2 = (sum2 / p2.Length);
+                Console.WriteLine("For: " + sumAverage2);
+            }
+        }
+        //3e
+        private static void DynamicSizedMethod(int p1, int p2, int p3)
+        {
+            int[] intArray2 = new int[p1];
+            for (int i = 0; i < p1; i++)
+            {
+                intArray2[i] = new Random().Next(p2, p3);
+            }
         }
     }
 }
