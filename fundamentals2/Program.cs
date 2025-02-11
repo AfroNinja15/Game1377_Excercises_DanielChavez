@@ -1,4 +1,6 @@
-﻿namespace fundamentals2
+﻿using System.Reflection;
+
+namespace fundamentals2
 {        
     internal class Program
     {
@@ -7,19 +9,22 @@
             Console.WriteLine("Hello, World!");
             Switch();
             ArrayLoops();
-            int[] intArray = new int[5];
-            float[] floatArray = new float[5];
-            double[] doubleArray = new double[5];
+
+            //Methods
             Console.WriteLine("ArraySize");
             int arraySize = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("rangeMin");
             int rangeMin = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("rangeMax");
             int rangeMax = Convert.ToInt32(Console.ReadLine());
+            int[] intArray = new int[5];
+            float[] floatArray = new float[5];
+            Console.WriteLine("Sum is " + OverloadMethod(floatArray));
+            double[] doubleArray = new double[5];
+            Console.WriteLine("Sum is " + OverloadMethod(doubleArray));
             IntMethod(intArray);
             FloatDoubleMethod(floatArray, doubleArray);
             ConvertIntToFloatMethod(intArray);
-            FloatDoubleAverageMethod(floatArray, doubleArray);
             DynamicSizedMethod(arraySize, rangeMin, rangeMax);
         }
         private static void Switch()
@@ -98,7 +103,7 @@
             Console.WriteLine("For: " + sumAverage);
 
             //2e
-            for (int i = 0;i < intArray.Length; i++)
+            for (int i = 0; i < intArray.Length; i++)
             {
                 if (i % 2  == 0)
                 {
@@ -157,7 +162,7 @@
             
         }
         //3d
-        private static void FloatDoubleAverageMethod(float[] p1, double[] p2)
+        private static float OverloadMethod(float[] p1)
         {
             {
                 float sumAverage;
@@ -168,7 +173,11 @@
                 }
                 sumAverage = (sum / p1.Length);
                 Console.WriteLine("For: " + sumAverage);
+                return sumAverage;
             }
+        }
+        private static double OverloadMethod(double[] p2)
+        {
             {
                 double sumAverage2;
                 double sum2 = 0;
@@ -178,6 +187,7 @@
                 }
                 sumAverage2 = (sum2 / p2.Length);
                 Console.WriteLine("For: " + sumAverage2);
+                return sumAverage2;
             }
         }
         //3e
