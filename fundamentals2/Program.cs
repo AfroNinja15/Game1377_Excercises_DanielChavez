@@ -19,11 +19,12 @@ namespace fundamentals2
             int rangeMax = Convert.ToInt32(Console.ReadLine());
             int[] intArray = new int[5];
             float[] floatArray = new float[5];
-            Console.WriteLine("Sum is " + OverloadMethod(floatArray));
+            Console.WriteLine("Float is " + FloatDoubleMethod(floatArray));
+            Console.WriteLine("Average is " + AverageOverloadMethod(floatArray));
             double[] doubleArray = new double[5];
-            Console.WriteLine("Sum is " + OverloadMethod(doubleArray));
+            Console.WriteLine("Double is " + FloatDoubleMethod(doubleArray));
+            Console.WriteLine("Average is " + AverageOverloadMethod(doubleArray));
             IntMethod(intArray);
-            FloatDoubleMethod(floatArray, doubleArray);
             ConvertIntToFloatMethod(intArray);
             DynamicSizedMethod(arraySize, rangeMin, rangeMax);
         }
@@ -145,24 +146,39 @@ namespace fundamentals2
             }
         }
         //3b
-        private static void FloatDoubleMethod(float[] p1, double[] p2)
+        private static float FloatDoubleMethod(float[] p1)
         {
             for(int i = 0; i < p1.Length; i++)
             {
                 Console.WriteLine(p1[i]);
             }
-            for (int i = 0; i < p2.Length; i++)
+            return p1[0];
+        }
+        private static double FloatDoubleMethod(double[] p1)
+        {
+            for (int i = 0; i < p1.Length; i++)
             {
-                Console.WriteLine(p2[i]);
+                Console.WriteLine(p1[i]);
             }
+            return p1[0];
         }
         //3c
-        private static void ConvertIntToFloatMethod(int[] p1)
+        private static float ConvertIntToFloatMethod(int[] p1)
         {
-            
+            float[] floatArray = new float[p1.Length];
+            float sumAverage = 0;
+            for (int i = 0; i < p1.Length; i++)
+            {
+                floatArray[i] = p1[i];
+                sumAverage += floatArray[i];
+            }
+            sumAverage = (sumAverage / p1.Length);
+            Console.WriteLine(" Float For: " + sumAverage);
+            return sumAverage;
+
         }
         //3d
-        private static float OverloadMethod(float[] p1)
+        private static float AverageOverloadMethod(float[] p1)
         {
             {
                 float sumAverage;
@@ -172,11 +188,11 @@ namespace fundamentals2
                     sum += p1[i];
                 }
                 sumAverage = (sum / p1.Length);
-                Console.WriteLine("For: " + sumAverage);
+                Console.WriteLine("Float For: " + sumAverage);
                 return sumAverage;
             }
         }
-        private static double OverloadMethod(double[] p2)
+        private static double AverageOverloadMethod(double[] p2)
         {
             {
                 double sumAverage2;
@@ -186,7 +202,7 @@ namespace fundamentals2
                     sum2 += p2[i];
                 }
                 sumAverage2 = (sum2 / p2.Length);
-                Console.WriteLine("For: " + sumAverage2);
+                Console.WriteLine(" Double For: " + sumAverage2);
                 return sumAverage2;
             }
         }
